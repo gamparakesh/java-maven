@@ -36,4 +36,19 @@ if %ERRORLEVEL% EQU 0 (
     echo ------------------------------------------
 )
 
-pause
+:: Execute the Java file within the copied JAR
+echo Starting Java application...
+echo ------------------------------------------
+
+cd /d "%DEST_DIR%"
+
+:: Option A: If your JAR has a Main-Class defined in its manifest (Standard)
+java -jar "%JAR_NAME%"
+
+:: Option B: If you need to run a specific class file within the JAR manually, 
+:: uncomment the line below and replace 'com.example.MainClass' with your actual package path:
+:: java -cp "%JAR_NAME%" com.example.MainClass
+
+echo ------------------------------------------
+echo Application execution finished.
+echo ==========================================
