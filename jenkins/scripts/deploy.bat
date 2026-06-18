@@ -4,7 +4,7 @@
 :: ==========================================
 
 :: 1. Define your Source and Destination paths
-set "SOURCE_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\simple-java-maven-project\target"
+set "SOURCE_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\simple-java-maven-project\target\my-app-1.0-SNAPSHOT.jar"
 set "DEST_DIR=C:\Leela\Jenkins"
 
 echo Starting deployment...
