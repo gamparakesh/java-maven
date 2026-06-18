@@ -4,8 +4,8 @@
 :: ==========================================
 
 :: 1. Define your Source and Destination paths
-set "SOURCE_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\simple-java-maven-project\target\my-app-1.0-SNAPSHOT.jar"
-set "DEST_DIR=C:\Leela\Jenkins"
+set "SOURCE_DIR=C:\ProgramData\Jenkins\.jenkins\workspace\simple-java-maven-project\target\"
+set "DEST_DIR=C:\Leela\Jenkins\"
 
 echo Starting deployment...
 echo Copying files from: %SOURCE_DIR%
@@ -23,7 +23,7 @@ if not exist "%DEST_DIR%" (
 :: /E = Copies any subdirectories, even if they are empty
 :: /Y = Suppresses prompting to confirm you want to overwrite an existing file
 :: /I = If destination does not exist and copying more than one file, assumes that destination must be a directory
-xcopy "%SOURCE_DIR%\*.*" "%DEST_DIR%\" /S /E /Y /I
+xcopy "%SOURCE_DIR%\my-app-1.0-SNAPSHOT.jar" "%DEST_DIR%\" /S /E /Y /I
 
 :: 4. Check if the copy operation was successful
 if %ERRORLEVEL% EQU 0 (
