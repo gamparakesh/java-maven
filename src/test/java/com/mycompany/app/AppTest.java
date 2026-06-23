@@ -23,3 +23,4 @@ public class AppTest
         assertEquals("Hello Jenkins World1!", app.getMessage());
     }
 }
+
